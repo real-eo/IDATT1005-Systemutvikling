@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatx1005.hmh.controller.UserProfileController"
+      spacing="15.0" prefHeight="600.0" prefWidth="800.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="User Profile" styleClass="title"/>
+    <Separator/>
+
+    <!-- Form Content -->
+    <GridPane hgap="10.0" vgap="15.0">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="400.0"/>
+        </columnConstraints>
+
+        <!-- Name -->
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   promptText="Enter your name"/>
+
+        <!-- Email -->
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   promptText="Enter your email"/>
+
+        <!-- Phone -->
+        <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   promptText="Enter your phone number"/>
+
+        <!-- Preferred Causes -->
+        <Label text="Preferred Causes:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextArea fx:id="preferredCausesArea" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  prefRowCount="3" promptText="Enter preferred causes (comma-separated)"
+                  wrapText="true"/>
+    </GridPane>
+
+    <!-- Status Label -->
+    <Label fx:id="statusLabel" styleClass="status-message">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Label>
+
+    <!-- Buttons -->
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+
+        <Button fx:id="saveButton" text="Save" onAction="#handleSave"
+                styleClass="primary-button" prefWidth="100.0"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel"
+                styleClass="secondary-button" prefWidth="100.0"/>
+    </HBox>
+
+</VBox>

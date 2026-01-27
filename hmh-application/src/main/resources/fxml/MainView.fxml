@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="no.ntnu.idatx1005.hmh.controller.MainController"
+            fx:id="mainBorderPane"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <!-- Top Menu Bar -->
+    <top>
+        <MenuBar fx:id="menuBar">
+            <Menu text="File">
+                <MenuItem text="Exit" onAction="#exitApplication"/>
+            </Menu>
+            <Menu text="View">
+                <MenuItem text="User Profile" onAction="#showUserProfile"/>
+                <MenuItem text="Organizations" onAction="#showOrganizationList"/>
+                <MenuItem text="Make Donation" onAction="#showDonationView"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="About" onAction="#showAbout"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Center Content Area -->
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+            </padding>
+
+            <Label text="Welcome to Help Me Help" styleClass="title"/>
+            <Label text="Support trustworthy organizations verified by Innsamlingskontrollen"
+                   styleClass="subtitle" wrapText="true" textAlignment="CENTER"/>
+
+            <HBox alignment="CENTER" spacing="20.0">
+                <VBox.margin>
+                    <Insets top="40.0"/>
+                </VBox.margin>
+
+                <Button text="View Organizations" onAction="#showOrganizationList"
+                        styleClass="primary-button" prefWidth="200.0" prefHeight="50.0"/>
+                <Button text="Make a Donation" onAction="#showDonationView"
+                        styleClass="primary-button" prefWidth="200.0" prefHeight="50.0"/>
+                <Button text="My Profile" onAction="#showUserProfile"
+                        styleClass="primary-button" prefWidth="200.0" prefHeight="50.0"/>
+            </HBox>
+
+            <Label text="Making a difference, one donation at a time"
+                   styleClass="footer-text">
+                <VBox.margin>
+                    <Insets top="60.0"/>
+                </VBox.margin>
+            </Label>
+        </VBox>
+    </center>
+
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT" spacing="10.0">
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+            </padding>
+            <Label text="Ready" styleClass="status-label"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
