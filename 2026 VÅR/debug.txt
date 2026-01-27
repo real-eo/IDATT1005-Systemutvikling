@@ -1,0 +1,1 @@
+only here to not make version control freak out, aka, segregate `VÅR 2026/` and `VÅR 2026/{submodule}`
