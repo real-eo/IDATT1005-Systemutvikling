@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatx1005.hmh.controller.DonationController"
+      spacing="15.0" prefHeight="600.0" prefWidth="700.0">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Make a Donation" styleClass="title"/>
+    <Separator/>
+
+    <!-- Total Donated Display -->
+    <Label fx:id="totalDonatedLabel" text="Total donated: 0 NOK"
+           styleClass="subtitle">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Label>
+
+    <!-- Form Content -->
+    <GridPane hgap="10.0" vgap="15.0">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="400.0"/>
+        </columnConstraints>
+
+        <!-- Organization Selection -->
+        <Label text="Organization:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <ComboBox fx:id="organizationComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  prefWidth="400.0" promptText="Select an organization"/>
+
+        <!-- Amount -->
+        <Label text="Amount (NOK):" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="amountField" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   promptText="Enter donation amount"/>
+
+        <!-- Notes -->
+        <Label text="Notes (optional):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextArea fx:id="notesArea" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                  prefRowCount="4" promptText="Add any notes about your donation"
+                  wrapText="true"/>
+    </GridPane>
+
+    <!-- Information Box -->
+    <VBox styleClass="info-box" spacing="5.0">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        </padding>
+
+        <Label text="ℹ Information" styleClass="info-title"/>
+        <Label text="All organizations listed are verified by Innsamlingskontrollen (IK)."
+               wrapText="true"/>
+        <Label text="Your donation will be securely processed and recorded."
+               wrapText="true"/>
+    </VBox>
+
+    <!-- Status Label -->
+    <Label fx:id="statusLabel" styleClass="status-message">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Label>
+
+    <!-- Buttons -->
+    <HBox spacing="10.0" alignment="CENTER_LEFT">
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+
+        <Button fx:id="donateButton" text="Donate" onAction="#handleDonate"
+                styleClass="primary-button" prefWidth="120.0"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel"
+                styleClass="secondary-button" prefWidth="120.0"/>
+    </HBox>
+
+</VBox>

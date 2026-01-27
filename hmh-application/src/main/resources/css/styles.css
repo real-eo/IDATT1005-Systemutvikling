@@ -1,0 +1,262 @@
+/*
+ * Help Me Help (HmH) Application Stylesheet
+ * Following WCAG 2.0 Principle 1 (Perceivable) guidelines
+ */
+
+/* Root Variables */
+.root {
+    /* Color Palette - High contrast ratios for accessibility */
+    -fx-primary-color: #2c3e50;
+    -fx-secondary-color: #3498db;
+    -fx-accent-color: #27ae60;
+    -fx-danger-color: #e74c3c;
+    -fx-light-bg: #ecf0f1;
+    -fx-dark-text: #2c3e50;
+    -fx-light-text: #ffffff;
+    
+    /* Font Sizes - Clear hierarchy and readability */
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size-base: 14px;
+    -fx-font-size-large: 18px;
+    -fx-font-size-title: 24px;
+}
+
+/* Typography */
+.title {
+    -fx-font-size: -fx-font-size-title;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.subtitle {
+    -fx-font-size: -fx-font-size-large;
+    -fx-text-fill: -fx-dark-text;
+}
+
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: -fx-font-size-base;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.primary-button {
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: -fx-light-text;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2980b9;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #21618c;
+}
+
+.secondary-button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: -fx-light-text;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #5d6d7e;
+}
+
+/* Input Fields */
+.text-field, .text-area {
+    -fx-font-size: -fx-font-size-base;
+    -fx-padding: 8px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: -fx-secondary-color;
+    -fx-border-width: 2px;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: -fx-font-size-base;
+    -fx-text-fill: -fx-dark-text;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-font-size: -fx-font-size-base;
+}
+
+/* CheckBox */
+.check-box {
+    -fx-font-size: -fx-font-size-base;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 2px;
+    -fx-border-radius: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: -fx-accent-color;
+}
+
+/* Table View */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: -fx-light-bg;
+    -fx-font-weight: bold;
+    -fx-font-size: -fx-font-size-base;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-light-bg;
+}
+
+.table-row-cell {
+    -fx-cell-size: 35px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fafafa;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #d6eaf8;
+    -fx-text-fill: -fx-dark-text;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e8f4f8;
+}
+
+/* Menu Bar */
+.menu-bar {
+    -fx-background-color: -fx-primary-color;
+}
+
+.menu-bar .label {
+    -fx-text-fill: -fx-light-text;
+    -fx-font-size: -fx-font-size-base;
+}
+
+.menu-item .label {
+    -fx-text-fill: -fx-dark-text;
+}
+
+/* Status Bar */
+.status-bar {
+    -fx-background-color: -fx-light-bg;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: -fx-dark-text;
+}
+
+.status-message {
+    -fx-font-size: -fx-font-size-base;
+    -fx-text-fill: -fx-accent-color;
+    -fx-font-weight: bold;
+}
+
+/* Information Box */
+.info-box {
+    -fx-background-color: #d6eaf8;
+    -fx-border-color: -fx-secondary-color;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.info-title {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-secondary-color;
+}
+
+/* Separator */
+.separator {
+    -fx-padding: 5px 0;
+}
+
+.separator .line {
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* Scrollbar - Improved visibility */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #95a5a6;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* Focus Indicators - Accessibility */
+.text-field:focused,
+.text-area:focused,
+.button:focused,
+.combo-box:focused,
+.check-box:focused {
+    -fx-effect: dropshadow(gaussian, -fx-secondary-color, 5, 0.5, 0, 0);
+}
+
+/* Error States */
+.text-field.error,
+.text-area.error {
+    -fx-border-color: -fx-danger-color;
+    -fx-border-width: 2px;
+}
+
+/* Disabled States */
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.text-field:disabled,
+.text-area:disabled,
+.combo-box:disabled {
+    -fx-opacity: 0.6;
+    -fx-background-color: #ecf0f1;
+}
