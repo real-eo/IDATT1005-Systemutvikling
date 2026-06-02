@@ -1,4 +1,6 @@
-Ja — under får du **alle tre delene**, men **ikke** en punkt-for-punkt omskriving av hele `Slides.md`.
+> **@GPT-5.4:**
+> 
+> Ja — under får du **alle tre delene**, men **ikke** en punkt-for-punkt omskriving av hele `Slides.md`.
 
 ---
 
@@ -104,7 +106,9 @@ Ja — under får du **alle tre delene**, men **ikke** en punkt-for-punkt omskri
 
 # Del 2: Muntlig eksamensforklaring for hvert hovedtema i naturlig språk
 
-Nå formulerer jeg dette slik du kan **si det muntlig**.
+> **@GPT-5.4:**
+> 
+> Nå formulerer jeg dette slik du kan **si det muntlig**.
 
 ---
 
@@ -200,7 +204,9 @@ Prosjektplanlegging handler om å skape retning og struktur, mens risikoanalyse 
 
 # Del 3: “Hvis du får spørsmål om X, koble det til Y og Z”-oversikt for rask pugging
 
-Dette er laget for muntlig og skriftlig eksamen, så du raskt kan utvide svarene dine.
+> **@GPT-5.4:**
+> 
+> Dette er laget for muntlig og skriftlig eksamen, så du raskt kan utvide svarene dine.
 
 ---
 

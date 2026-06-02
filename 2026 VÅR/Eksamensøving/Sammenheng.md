@@ -1,4 +1,6 @@
-Ja — den riktige måten å lære dette på er **ikke** å pugge hvert punkt isolert, men å forstå **hvordan temaene henger sammen i en faktisk systemutviklingsprosess**. Under går jeg derfor gjennom stoffet som ett helhetlig fagkart: fra idé, krav og brukerbehov, via modellering og arkitektur, til utviklingsmetodikk, testing, lovkrav og profesjonsetikk. Samtidig retter og presiserer jeg noen formuleringer i notatene dine.
+> **@GPT-5.4:**
+> 
+> Ja — den riktige måten å lære dette på er **ikke** å pugge hvert punkt isolert, men å forstå **hvordan temaene henger sammen i en faktisk systemutviklingsprosess**. Under går jeg derfor gjennom stoffet som ett helhetlig fagkart: fra idé, krav og brukerbehov, via modellering og arkitektur, til utviklingsmetodikk, testing, lovkrav og profesjonsetikk. Samtidig retter og presiserer jeg noen formuleringer i notatene dine.
 
 ---
 
